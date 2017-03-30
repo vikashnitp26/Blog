@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  {% for p in posts %}
+    {{ p.render() | safe }}
+    <br>{{like}}<a href="/like">like</a> <a href="/unlike">unlike</a> <a href="/comment">comment</a> <br>
+    <br><br>
+  {% endfor %}
+
+{% endblock %}
